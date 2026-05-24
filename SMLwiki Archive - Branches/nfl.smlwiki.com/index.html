@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        font-family: Free pixel;
+    }
+
+    * {
+        font-weight: 200 !important;
+        font-size: 13px;
+    }
+
+    *:not(#main) {
+        border-collapse: collapse;
+    }
+
+    j {
+        color: #fff;
+        position: absolute;
+        left: 50px
+    }
+
+    #main {
+        padding-top: 24px;
+    }
+
+    @media (max-height: 640px) {
+        #main {
+            padding-top: 24vh;
+        }
+
+        #main {
+            zoom: 80%;
+        }
+    }
+
+    th {
+        border: solid darkgray 1px
+    }
+
+    @font-face {
+        font-family: 'Free pixel';
+        src: url('https://nfl.smlwiki.com/global/FreePixel.ttf') format('truetype');
+    }
+
+    #madden {
+        padding-top: 24vh;
+    }
+
+    #yt {
+        mix-blend-mode: darken;
+    }
+
+    @media (max-height: 600px) {
+        body {
+            zoom: 60%;
+            min-height: 168.3vh
+        }
+    }
+</style>
+<body bgcolor="white">
+    <table width="100%" height="100%" border="0">
+        <tbody>
+            <tr>
+                <td style="min-width: 110px; width: 2%; height: 100%; box-shadow: 1px -2px 3px 3px #0008;" background="https://nfl.smlwiki.com/global/bplanks.png"> <iframe src="global/sidebar.html" width="100%" height="100%" frameborder="0"></iframe>
+                </td>
+                <td style="width: 50%; position: relative;"> <iframe src="global/header.html" width="100%" height="auto" frameborder="0" style="position: absolute; top: 0; left: 0;" id="header"></iframe>
+                    <script>
+                        if (window.innerWidth < 801) {
+                            document.getElementById('header').src = 'https://nfl.smlwiki.com/global/header-small.html';
+                        }
+                    </script>
+
+                    <table width="528" border="0" align="center" id="main">
+                        <j>Marcus favorite videos,</j>
+                        <tbody>
+                            <tr>
+                                <td align="center" colspan="3"><img src="https://nfl.smlwiki.com/john.jpeg" id="jogn"></td>
+                            </tr>
+                            <tr>
+                                <td align="center"> <a href="https://youtube.com/video/q1v52f1TrWg"> <img src="https://nfl.smlwiki.com/fl1.jpeg" alt="NFL" style="transform: translateY(-20px);" onmouseover="this.src='https://nfl.smlwiki.com/fl2.jpeg'" onmouseout="this.src='https://nfl.smlwiki.com/fl1.jpeg'" /> </a> </td>
+                                <td align="center"></td>
+                                <td align="center"> <a href="https://youtube.com/channel/UCTn4Ku6JAYbmfQEYgbXUhtw/featured"> <img src="https://nfl.smlwiki.com/yt1.jpeg" id="yt" alt="Youtube channel" style="transform: translateY(-20px);" onmouseover="this.src='https://nfl.smlwiki.com/yt2.jpeg'" onmouseout="this.src='https://nfl.smlwiki.com/yt1.jpeg'" /> </a> </td>
+                            </tr>
+                            <tr>
+                                <td align="center" colspan="3"> <a href="oldwebsite.html"> <img src="https://nfl.smlwiki.com/back1.jpeg" alt="NFL" style="transform: translateY(-62px); margin-bottom: -50px;" onmouseover="this.src='https://nfl.smlwiki.com/back2.jpeg'" onmouseout="this.src='https://nfl.smlwiki.com/back1.jpeg'" /> </a> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" bgcolor="lightgray" align="center" style="border-top: solid 1px; margin-bottom: -2px; z-index: 2;">
+                    <table width="auto">
+                        <tbody>
+                            <tr>
+                                <th width="150"><a href="oldwebsite.html">Go back</a></th>
+                                <th width="150"><a href="index.html#">Contact</a></th>
+                                <th width="150"><a href="index.html#">Report spam</a></th>
+                                <th width="62" style="font-size: 14px; padding: 0 !important;"> <img src="https://nfl.smlwiki.com/wmp.gif" style="max-height: 22px !important; margin-bottom: -5px;"> </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        document.getElementById('jogn').addEventListener('click', function() {
+            window.open('./imsonic', 'popupWindow', 'width=360,height=268,toolbar=no,location=no,menubar=no,scrollbars=no');
+        });
+        window.self !== window.top && window.parent.postMessage({
+            type: "GADGET_footballclock_trigger"
+        }, "*");
+    </script>
+</body>
